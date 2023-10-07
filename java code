@@ -1,0 +1,28 @@
+import java.io.*;
+import java.lang.Math;
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        int n,n1,n2,temp,count=0,res;
+        Scanner sc=new Scanner(System.in);
+        n=sc.nextInt();
+        temp=n;
+        while(temp>0)
+        {
+            count++;
+            temp=temp/10;
+        }
+        if(count%2==0)
+        {
+          n1=n% (int) Math.pow(10,count/2);
+          n2=n/(int) Math.pow(10,count/2);
+          res=(int)Math.pow((n1+n2),2);
+          if(res==n)
+          System.out.print("yes");
+          else
+          System.out.print("no");
+        }
+        else
+        System.out.print("No");
+    }
+}
